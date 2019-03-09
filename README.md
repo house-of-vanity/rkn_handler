@@ -7,7 +7,7 @@ It uses `bird` on Linux as BGP anouncer. My hardware is `RouterBOARD 750G r2`, b
 1. Install `bird`
 2. Install `python3` if you don't have it yet.
 3. Minimal `bird` config is presented here. Read comments inside.
-4. Run `bgp_getter.py` to get last RKN blacklisted IP, generate `bird` config and restart bird service. 
+4. Run `bgp_getter.py` to get last RKN blacklisted IP, generate `bird` config and restart bird service. Run it using cron for instance.
 
 Also RouterOS minimal config looks like this:
 * 10.0.100.100 - is my VPN gateway.
