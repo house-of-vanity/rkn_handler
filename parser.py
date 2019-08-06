@@ -1,7 +1,6 @@
 import ipaddress
 
 OUT_FILE = "/etc/bird/prefixlist.txt"
-#OUT_FILE = "test.txt"
 
 with open('/root/rkn_ip_dump.csv') as f:
     ips = f.read().decode('iso-8859-1')
