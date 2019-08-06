@@ -2,7 +2,7 @@
 
 It uses `bird` on Linux as BGP anouncer. My hardware is `RouterBOARD 750G r2`, but you can use any you want/have.
 
-###How to use:
+### How to use:
 
 1. Install `bird`
 2. Install `python3` if you don't have it yet.
