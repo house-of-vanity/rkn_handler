@@ -9,6 +9,17 @@ It uses `bird` on Linux as BGP anouncer. My hardware is `RouterBOARD 750G r2`, b
 3. Minimal `bird` config is presented here. Read comments inside.
 4. Run `bgp_getter.py` to get last RKN blacklisted IP, generate `bird` config and restart bird service. Run it using cron for instance.
 
+#### Another version using [z-i repo](https://github.com/zapret-info/z-i)
+1. Get latest dump.
+2. Parse and build bird config.
+3. Restart bird.
+I use it in cron like this:
+```
+0 6 * * * curl https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv -o /root/rkn_ip_dump.csv
+4 6 * * * python /root/repos/rkn_handler/parser.py
+8 6 * * * systemctl restart bird.service 
+```
+
 Also RouterOS minimal config looks like this:
 * 10.0.100.100 - is my VPN gateway.
 * 192.168.88.149 - is my Linux box running bird.
